@@ -17,6 +17,11 @@
   <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=swap">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -30,7 +35,8 @@
     "telephone": "+49-3328-305426",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Straße Am Stichkanal",
+      "streetAddress": "Am Stichkanal 23G",
+      "postalCode": "14167",
       "addressLocality": "Berlin",
       "addressRegion": "Berlin",
       "addressCountry": "DE"
@@ -82,12 +88,11 @@
       <div class="container">
         <h2>Über uns</h2>
         <p>
-          Wir sind eine nette, lustige Gemeinschaft, die sich verbandsunabhängig und eigenständig organisiert.
+          Wir sind eine nette, lustige Gemeinschaft mit mehr als 20 Mitgliedern, die sich verbandsunabhängig und eigenständig organisiert.
           Historisch sind wir aus einer Freizeitaktionsgruppe der BVG entstanden.
         </p>
         <p>
-          Ansässig sind wir in Berlin-Lichterfelde. Unser Vereinsheim steht direkt am Teltowkanal an der
-          Straße Am Stichkanal. Angeln auf Friedfische ist unsere Leidenschaft — insbesondere das Angeln mit
+          Ansässig sind wir in Berlin-Lichterfelde. Unser Vereinsheim steht direkt am Teltowkanal, Am Stichkanal 23G. Angeln auf Friedfische ist unsere Leidenschaft, insbesondere das Angeln mit
           der Feederrute gehört zu unseren Spezialitäten. Wir nehmen regelmäßig an offiziellen Hegefischen teil.
         </p>
       </div>
@@ -98,20 +103,16 @@
       <div class="container">
         <h2>Mitglied werden</h2>
         <p>
-          Wir freuen uns über Neuzugänge — alle Angelarten sind willkommen.
+          Wir freuen uns über Neuzugänge, alle Angelarten sind willkommen.
           Voraussetzungen: Du bist ein geselliger Mensch und besitzt einen aktuellen Fischereischein.
         </p>
         <h3>Was erwartet Dich?</h3>
         <ul class="membership-highlights">
-          <li>Etwa 10 Vereinsangeln pro Jahr (Friedfisch &amp; Feeder)</li>
-          <li>Königskette: 3 Wettbewerbe (Feeder, Match, Kopfrute)</li>
-          <li>Nachtfeedern</li>
-          <li>4-Tage Barben-Tour — zelten, grillen, angeln</li>
-          <li>Regelmäßige Wochenend-Ausflüge</li>
+          <li>Rund 10 gemeinsame Angelveranstaltungen im Jahr</li>
+          <li>Gemütliches Nachtfeedern am Wasser</li>
+          <li>4-Tage Barben-Tour mit Zelten und Grillen</li>
+          <li>Regelmäßige Wochenend-Ausflüge in geselliger Runde</li>
         </ul>
-        <p>
-          <a href="#kontakt" class="cta-link">Kontakt aufnehmen →</a>
-        </p>
       </div>
     </section>
 
@@ -121,19 +122,18 @@
         <h2>Kontakt</h2>
         <div class="contact-info">
           <p><span class="contact-label">E-Mail:</span> <a href="mailto:info@asv-bvg.de">info@asv-bvg.de</a></p>
-          <p><span class="contact-label">Telefon:</span> <a href="tel:+493328305426">03328-305426</a></p>
-          <p><span class="contact-label">Adresse:</span> Straße Am Stichkanal, Berlin-Lichterfelde</p>
+          <p><span class="contact-label">Vereinsheim:</span> Am Stichkanal 23G, 14167 Berlin</p>
         </div>
 
-        <!-- Google Maps — 2-Click Consent (DSGVO) -->
-        <div id="maps-wrapper">
-          <div class="maps-consent" id="maps-consent">
-            <p>
-              Klicken Sie hier, um Google Maps zu laden.
-              Dabei werden Daten an Google übertragen.
-            </p>
-            <button class="btn" id="maps-load-btn" type="button">Karte laden</button>
-          </div>
+        <!-- Google Maps -->
+        <div class="maps-container">
+          <iframe
+            src="https://www.google.com/maps?q=Am+Stichkanal+23G,+14167+Berlin&z=15&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps: Standort ASV-BVG am Teltowkanal"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
     </section>
@@ -151,10 +151,9 @@
     </div>
   </footer>
 
-  <!-- Minimal JS: Hamburger toggle + Maps consent -->
+  <!-- Minimal JS: Hamburger toggle -->
   <script>
     (function () {
-      /* Hamburger menu toggle */
       var toggle = document.querySelector('.nav-toggle');
       var menu = document.getElementById('nav-menu');
       if (toggle && menu) {
@@ -170,28 +169,6 @@
             toggle.setAttribute('aria-label', 'Menü öffnen');
             menu.classList.remove('is-open');
           });
-        });
-      }
-
-      /* Google Maps 2-click consent (DSGVO) — uses safe DOM methods, no innerHTML */
-      var loadBtn = document.getElementById('maps-load-btn');
-      var wrapper = document.getElementById('maps-wrapper');
-      if (loadBtn && wrapper) {
-        loadBtn.addEventListener('click', function () {
-          var container = document.createElement('div');
-          container.className = 'maps-container';
-          var iframe = document.createElement('iframe');
-          iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.5!2d13.307!3d52.432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sTeltowkanal%2C+Berlin-Lichterfelde!5e0!3m2!1sde!2sde!4v1700000000000';
-          iframe.loading = 'lazy';
-          iframe.referrerPolicy = 'no-referrer-when-downgrade';
-          iframe.title = 'Google Maps: Standort ASV-BVG am Teltowkanal';
-          iframe.allowFullscreen = true;
-          container.appendChild(iframe);
-          /* Clear consent placeholder and insert map */
-          while (wrapper.firstChild) {
-            wrapper.removeChild(wrapper.firstChild);
-          }
-          wrapper.appendChild(container);
         });
       }
     })();
