@@ -11,16 +11,19 @@
   <meta property="og:description" content="Angeln am Teltowkanal in Berlin-Lichterfelde. Vereinsangeln, Feederangeln und Gemeinschaft.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://asv-bvg.de/">
-  <!-- TODO: Add og:image once club provides a photo -->
-  <!-- <meta property="og:image" content="https://asv-bvg.de/images/og-image.jpg"> -->
+  <meta property="og:image" content="https://asv-bvg.de/images/logo.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://asv-bvg.de/">
 
   <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
-  <!-- Fonts -->
+  <!-- Fonts (non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=swap"></noscript>
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -42,7 +45,8 @@
       "addressCountry": "DE"
     },
     "description": "Angelsportverein der BVG e.V. — Angeln am Teltowkanal in Berlin-Lichterfelde.",
-    "sport": "Angeln"
+    "sport": "Angeln",
+    "taxID": "VR 4941 Nz, Amtsgericht Berlin-Charlottenburg"
   }
   </script>
 </head>
@@ -76,7 +80,7 @@
     <!-- Welcome -->
     <section id="willkommen">
       <div class="container">
-        <h1>Angelsportverein der BVG e.V.</h1>
+        <h1>Angelsportverein der BVG e.V. in Berlin</h1>
         <p>
           Willkommen beim Angelsportverein der BVG e.V. Angeln am Teltowkanal seit Generationen.
         </p>
