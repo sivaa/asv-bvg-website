@@ -1,0 +1,16 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (if ever needed)
+node_modules/
+package-lock.json
+
+# Environment
+.env
+.env.local
