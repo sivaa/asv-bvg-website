@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://asv-bvg.de/sitemap.xml

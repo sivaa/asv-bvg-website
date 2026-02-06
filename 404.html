@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seite nicht gefunden — ASV-BVG e.V.</title>
+  <meta name="description" content="Die angeforderte Seite wurde nicht gefunden.">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">ASV-BVG e.V.</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="/#ueber-uns">Über uns</a></li>
+      <li><a href="/#mitglied-werden">Mitglied werden</a></li>
+      <li><a href="/#kontakt">Kontakt</a></li>
+    </ul>
+    <noscript>
+      <style>.nav-toggle{display:none}.nav-links{display:block}</style>
+    </noscript>
+  </nav>
+
+  <main id="main">
+    <div class="container page-404">
+      <h1>404</h1>
+      <p>Seite nicht gefunden.</p>
+      <a href="/" class="btn">Zur Startseite</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Angelsportverein der BVG e.V.</p>
+      <p class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('nav-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+          var expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          toggle.setAttribute('aria-label', expanded ? 'Menü öffnen' : 'Menü schließen');
+          menu.classList.toggle('is-open');
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
