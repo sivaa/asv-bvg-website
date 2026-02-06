@@ -166,12 +166,18 @@ section {
 }
 
 .nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 600;
   font-size: 1.125rem;
   color: #1D1F25;
   text-decoration: none;
-  text-transform: uppercase;
   letter-spacing: 0.02em;
+}
+
+.nav-logo {
+  border-radius: 50%;
 }
 
 .nav-brand:hover,
