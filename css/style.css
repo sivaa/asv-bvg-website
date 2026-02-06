@@ -144,7 +144,7 @@ p:last-child {
 }
 
 section {
-  padding: clamp(2.5rem, 5vw, 4rem) 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0;
 }
 
 /* --- Navigation --- */
