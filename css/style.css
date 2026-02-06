@@ -251,17 +251,11 @@ section {
   background: none;
 }
 
-/* noscript fallback: always show nav links */
-noscript .nav-links {
-  display: block;
-}
-
-noscript .nav-toggle {
-  display: none;
-}
-
 /* --- CTA as simple link --- */
 .cta-link {
+  display: inline-block;
+  padding: 0.5rem 0;
+  min-height: 44px;
   font-weight: 600;
   text-decoration: underline;
   text-decoration-color: #A04535;
