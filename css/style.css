@@ -348,7 +348,8 @@ section {
 
 /* --- Legal Pages (Impressum, Datenschutz) --- */
 .legal-page {
-  padding: 2rem 0 4rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
 .legal-page h1 {
