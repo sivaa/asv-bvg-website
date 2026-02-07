@@ -41,8 +41,8 @@
   <!-- Fonts (non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=swap"></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=optional" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=optional"></noscript>
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -95,7 +95,7 @@
   <!-- Navigation -->
   <nav class="site-nav" aria-label="Hauptnavigation">
     <div class="nav-inner">
-      <a href="/" class="nav-brand"><img src="/images/logo.png" alt="" width="36" height="36" class="nav-logo">ASV-BVG e.V.</a>
+      <a href="/" class="nav-brand"><img src="/images/logo.webp" alt="" width="36" height="36" class="nav-logo">ASV-BVG e.V.</a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü öffnen">
         <span></span>
         <span></span>
@@ -167,15 +167,13 @@
           <p><span class="contact-label">Vereinsheim:</span> Am Stichkanal 23G, 14167 Berlin</p>
         </div>
 
-        <!-- Google Maps -->
-        <div class="maps-container">
-          <iframe
-            src="https://www.google.com/maps?q=52.41511358294279,13.293433891803069&z=15&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Google Maps: Standort ASV-BVG am Teltowkanal"
-            allowfullscreen>
-          </iframe>
+        <!-- Google Maps (click-to-load for performance + GDPR) -->
+        <div class="maps-container" id="maps-container">
+          <div class="maps-placeholder" id="maps-placeholder">
+            <p><strong>Standort am Teltowkanal</strong></p>
+            <button type="button" class="btn" id="load-map-btn">Google Maps laden</button>
+            <p class="maps-privacy">Es gelten die <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzbestimmungen</a> von Google.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -193,7 +191,7 @@
     </div>
   </footer>
 
-  <!-- Minimal JS: Hamburger toggle -->
+  <!-- Minimal JS: Hamburger toggle + Maps loader -->
   <script>
     (function () {
       var toggle = document.querySelector('.nav-toggle');
@@ -211,6 +209,21 @@
             toggle.setAttribute('aria-label', 'Menü öffnen');
             menu.classList.remove('is-open');
           });
+        });
+      }
+      var mapBtn = document.getElementById('load-map-btn');
+      if (mapBtn) {
+        mapBtn.addEventListener('click', function () {
+          var c = document.getElementById('maps-container');
+          var iframe = document.createElement('iframe');
+          iframe.src = 'https://www.google.com/maps?q=52.41511358294279,13.293433891803069&z=15&output=embed';
+          iframe.referrerPolicy = 'no-referrer-when-downgrade';
+          iframe.title = 'Google Maps: Standort ASV-BVG am Teltowkanal';
+          iframe.allowFullscreen = true;
+          iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0';
+          var placeholder = document.getElementById('maps-placeholder');
+          if (placeholder) placeholder.remove();
+          c.appendChild(iframe);
         });
       }
     })();
