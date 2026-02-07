@@ -14,7 +14,58 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=optional" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=optional"></noscript>
-  <link rel="stylesheet" href="/css/style.css">
+  <!-- Styles (inlined from css/style.css to eliminate render-blocking request) -->
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+body{font-family:"Readex Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-synthesis:none;font-size:18px;font-weight:400;line-height:1.75;color:#1D1F25;background-color:#EBE8E6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+img{max-width:100%;height:auto;display:block}
+a{color:#1D1F25;text-decoration:underline;text-underline-offset:3px;text-decoration-color:currentColor}
+a:hover,a:focus{text-decoration-color:#A04535}
+ul,ol{padding-left:1.25em}
+.skip-link{position:absolute;top:-100%;left:0;background:#1D1F25;color:#EBE8E6;padding:.75em 1.5em;z-index:1000;font-weight:600;text-decoration:none;border-radius:0 0 4px 0}
+.skip-link:focus{top:0}
+:focus-visible{outline:3px solid #A04535;outline-offset:2px}
+:focus:not(:focus-visible){outline:none}
+h1,h2,h3{font-weight:600;line-height:1.25;color:#1D1F25}
+h1{font-size:1.75rem;margin-bottom:1.5rem}
+h2{font-size:1.5rem;margin-bottom:1.25rem}
+h3{font-size:1.125rem;margin-bottom:.5rem}
+p{margin-bottom:1.25rem}
+p:last-child{margin-bottom:0}
+.container{width:100%;max-width:800px;margin:0 auto;padding:0 clamp(1.75rem,6vw,3rem)}
+section{padding:clamp(1.5rem,3vw,2.5rem) 0}
+.site-nav{position:sticky;top:0;z-index:100;background-color:#EBE8E6}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:1.25rem clamp(1.75rem,6vw,3rem);max-width:800px;margin:0 auto}
+.nav-brand{display:flex;align-items:center;gap:.5rem;font-weight:600;font-size:1.125rem;color:#1D1F25;text-decoration:none;letter-spacing:.02em}
+.nav-logo{width:36px;height:36px;border-radius:50%}
+.nav-brand:hover,.nav-brand:focus{text-decoration:none}
+.nav-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:.5rem;min-width:44px;min-height:44px}
+.nav-toggle span{display:block;width:24px;height:2px;background-color:#1D1F25;border-radius:1px;transition:transform .2s ease,opacity .2s ease}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-links{display:none;list-style:none;padding:0;margin:0;width:100%;background-color:#EBE8E6}
+.nav-links.is-open{display:block}
+.nav-links li{padding:0}
+.nav-links a{display:flex;align-items:center;padding:.75rem clamp(1.75rem,6vw,3rem);color:#1D1F25;text-decoration:none;font-weight:600;min-height:44px}
+.nav-links a:hover,.nav-links a:focus{text-decoration:underline;text-decoration-color:#A04535;text-underline-offset:6px;text-decoration-thickness:2px;background:none}
+.cta-link{display:inline-block;padding:.5rem 0;min-height:44px;font-weight:600;text-decoration:underline;text-decoration-color:#A04535;text-underline-offset:4px;text-decoration-thickness:2px}
+.cta-link:hover,.cta-link:focus{color:#A04535}
+.page-404{text-align:center;padding:6rem 1.25rem}
+.page-404 h1{font-size:3rem;margin-bottom:.5rem;color:#A04535}
+.page-404 p{font-size:1.125rem;margin-bottom:2rem}
+.page-404 a{text-decoration:underline;text-decoration-color:#A04535;text-underline-offset:3px;font-weight:600}
+.site-footer{text-align:center;padding:3rem clamp(1.75rem,6vw,3rem);font-size:.875rem;color:#1D1F25}
+.site-footer a{color:#1D1F25;text-decoration:none}
+.site-footer a:hover,.site-footer a:focus{text-decoration:underline;text-decoration-color:#A04535;text-underline-offset:3px}
+.footer-links{margin-top:.75rem}
+.footer-links a+a{margin-left:1.5rem}
+@media(min-width:768px){h1{font-size:2rem}h2{font-size:1.625rem}.nav-toggle{display:none}.nav-links{display:flex;gap:28px;width:auto;background:none}.nav-links a{padding:.5rem 0}}
+@media(min-width:1024px){h1{font-size:2rem}}
+@media print{.site-nav,.nav-toggle,.skip-link{display:none!important}body{background:#fff;color:#000;font-size:12pt;line-height:1.5}a{color:#000;text-decoration:underline}a[href]::after{content:" (" attr(href) ")";font-size:.8em}a[href^="#"]::after,a[href^="javascript"]::after{content:""}.site-footer{border-top:1px solid #000}section{padding:1.5rem 0;page-break-inside:avoid}}
+  </style>
 </head>
 <body>
 
