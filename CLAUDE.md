@@ -17,7 +17,7 @@ Static website for **ASV-BVG e.V.**, a fishing club (_Angelsportverein_) in Berl
 │  404.html ───────┘    images/ (favicon, logo, icons)    │
 │                                                         │
 │  Hosting: Vercel (auto-deploy on push to main)          │
-│  Domain target: asv-bvg.de                              │
+│  Domain: www.asv-bvg.de (primary, with redirect from apex)│
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -104,7 +104,7 @@ Every change MUST improve (or at minimum maintain) Core Web Vitals and SEO score
 | `css/style.css` | All styles — mobile-first with tablet/desktop media queries + print stylesheet |
 | `docs/DELIVERABLE.md` | Project handoff document for the club board |
 | `robots.txt` | Search engine directives |
-| `sitemap.xml` | Site map for search engines (URLs use `asv-bvg.de` domain) |
+| `sitemap.xml` | Site map for search engines (URLs use `www.asv-bvg.de` domain) |
 
 ## Link Paths
 
