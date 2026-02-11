@@ -14,3 +14,10 @@ package-lock.json
 # Environment
 .env
 .env.local
+
+# Temporary screenshots from testing/review sessions
+screenshots/
+
+# Playwright MCP artifacts
+.playwright-mcp/
+.vercel
