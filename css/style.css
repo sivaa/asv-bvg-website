@@ -17,6 +17,15 @@
    1024px   → desktop
    ========================================================================== */
 
+/* --- Self-hosted Google Font (DSGVO: no external request to Google) --- */
+@font-face {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: optional;
+  src: url("/fonts/readex-pro.woff2") format("woff2");
+}
+
 /* --- CSS Reset (minimal) --- */
 *,
 *::before,

@@ -9,12 +9,9 @@
   <meta name="theme-color" content="#EBE8E6">
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=optional" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=optional"></noscript>
   <!-- Styles (inlined from css/style.css to eliminate render-blocking request) -->
   <style>
+@font-face{font-family:"Readex Pro";font-style:normal;font-weight:400 600;font-display:optional;src:url("/fonts/readex-pro.woff2") format("woff2")}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
@@ -129,6 +126,13 @@ section{padding:clamp(1.5rem,3vw,2.5rem) 0}
       <p>
         Nach dem Laden von Google Maps kann Google Ihre IP-Adresse erfassen und Cookies setzen.
         Die Rechtsgrundlage ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+        Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die Seite neu laden,
+        ohne den Button erneut zu klicken (Art. 7 Abs. 3 DSGVO). Die Rechtmäßigkeit der
+        bis zum Widerruf erfolgten Datenverarbeitung bleibt davon unberührt.
+      </p>
+      <p>
+        Google ist unter dem EU-US Data Privacy Framework zertifiziert, sodass ein
+        angemessenes Datenschutzniveau für die Übermittlung in die USA gewährleistet ist.
       </p>
       <p>
         Weitere Informationen zum Datenschutz bei Google finden Sie unter:
@@ -189,7 +193,7 @@ section{padding:clamp(1.5rem,3vw,2.5rem) 0}
         Datenschutzerklärung.
       </p>
 
-      <p><em>Stand: Februar 2026</em></p>
+      <p><em>Stand: März 2026</em></p>
     </div>
   </main>
 
